@@ -3,53 +3,65 @@
     max-width: 60%;
 
 }
+
 @media (max-width: 2000px) {
     .container {
         max-width: 1300px;
     }
 }
+
 @media (max-width: 1200px) {
     .container {
         max-width: 970px;
     }
 }
+
 @media (max-width: 992px) {
     .container {
         max-width: 750px;
     }
+
     .contT {
         font-size: xx-large;
     }
 }
+
 @media (max-width: 767px) {
     .container {
         max-width: none;
     }
+
     .contT {
         font-size: x-large;
     }
+
     .pre {
         display: none;
     }
+
     .inp {
         min-width: 90%;
         margin: 20px 5% 20px 5%;
     }
+
     .res {
         min-width: 90%;
         margin: 20px 5% 20px 5%;
     }
+
     .arrow {
         max-width: 10%;
         margin: 0 45% 0 45%;
     }
 }
+
 body {
     background-color: linen;
     font-family: Tahoma;
     color: black;
-    font-size: xx-large ;
+    font-size: xx-large;
 }
+
 .contT {
     font-family: Tahoma;
     color: black;
@@ -58,28 +70,31 @@ body {
     text-align: center;
     word-break: break-word;
 }
+
 .pre {
     font-family: Tahoma;
     color: darkgray;
-    font-size: large ;
+    font-size: large;
     min-width: 80%;
     margin: 20px 10% 0 10%;
     text-align: center;
     word-break: break-word;
 }
+
 .inp {
     font-family: Tahoma;
     color: black;
-    font-size: x-large ;
+    font-size: x-large;
     min-height: 200px;
     min-width: 80%;
     border: 2px;
     border-radius: 15px;
     margin: 20px 10% 20px 10%;
     text-align: center;
-    word-break:break-all;
+    word-break: break-all;
     resize: none;
 }
+
 .but {
     font-family: Tahoma;
     color: white;
@@ -89,45 +104,53 @@ body {
     margin-right: auto;
     margin-left: auto;
     align-items: center;
-    font-size: xx-large ;
+    font-size: xx-large;
     text-align: center;
     horiz-align: center;
-    background-color: forestgreen ;
-    word-break:break-all;
+    background-color: forestgreen;
+    word-break: break-all;
     border-radius: 15px;
     padding: 5px;
     box-shadow: inset 0 0 40px white;
 }
+
 .res {
     min-width: 80%;
     margin: 20px 10% 20px 10%;
     text-align: center;
     horiz-align: center;
 }
+
 .lat {
     font-family: Tahoma;
     color: red;
-    font-size: x-large ;
+    font-size: x-large;
 }
+
 .cyr {
     font-family: Tahoma;
     color: blue;
-    font-size: x-large ;
-}.red {
+    font-size: x-large;
+}
+
+.red {
     font-family: Tahoma;
     color: red;
-    font-size: large ;
+    font-size: large;
 }
+
 .blue {
     font-family: Tahoma;
     color: blue;
-    font-size: large ;
+    font-size: large;
 }
+
 .txt {
     font-family: Tahoma;
     color: black;
-    font-size: x-large ;
+    font-size: x-large;
 }
+
 .arrow {
     max-width: 4%;
     margin: 0 48% 0 48%;

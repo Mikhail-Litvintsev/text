@@ -1,5 +1,7 @@
 <?php
+
     namespace Core;
+
     use Core\Path;
     use Core\View;
 
@@ -7,37 +9,33 @@
     {
         protected $title;
         protected $description;
-        protected $preface;
-        protected $contentTitle;
+        protected $bodyData;
+        protected $inputName;
 
         public function __construct()
         {
             $this->title = (new Path())->getContent('title');
             $this->description = (new Path())->getContent('description');
-            $this->preface = (new Path())->getContent('preface');
-            $this->contentTitle = (new Path())->getContent('contentTitle');
+            $this->bodyData = (new Path())->getData('body');
+            $this->inputName = 'text';
         }
 
         public function getPage()
         {
             $data = $this->getData();
-            return (new View('Index', $data))->Render();
+            return (new View('index', $data))->Render();
         }
 
         private function getData()
         {
-            $text = new Text('text');
-            $textResult = $text->TranslitSame();
-            $show = $text->getSpan();
+            $text = new Text($this->inputName);
+            $bodyData = $this->bodyData;
+            $bodyData['textResult'] = $text->TranslitSame();
+            $bodyData['colorView'] = $text->getSpan();
             return [
                 'title' => $this->title,
                 'description' => $this->description,
-                'content' => (new View('Content',
-                    ['show' => $show,
-                    'contentTitle' => $this->contentTitle,
-                    'preface' => $this->preface,
-                    'textResult' => $textResult
-                    ]))->Render()
+                'content' => (new View('content', $bodyData))->Render()
             ];
         }
     }

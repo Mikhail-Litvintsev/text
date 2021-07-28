@@ -1,5 +1,7 @@
 <?php
+
     namespace Core;
+
     use Core\Path;
 
     class View
@@ -10,7 +12,7 @@
         public function __construct($View, $Data = [])
         {
             $this->View = $View;
-            $this->Data =$Data;
+            $this->Data = $Data;
         }
 
         public function Render()
