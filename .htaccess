@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+#AddDefaultCharset UTF-8
+RewriteCond %{REQUEST_URI} !^/assets/
+RewriteRule .+ index.php
